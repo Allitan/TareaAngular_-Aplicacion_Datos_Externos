@@ -11,7 +11,7 @@ export class Pokeapi {
 
   constructor ( private http: HttpClient) {}
 
-  getPokemons(limite: number = 30) : Observable<IListadoPokemon>{
+  getPokemons(limite: number = 50) : Observable<IListadoPokemon>{
     const resultado = this.http.get<IListadoPokemon>(`${this.apiUrl}pokemon?limit=${limite}`)
     return resultado
   }

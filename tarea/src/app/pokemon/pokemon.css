@@ -1,3 +1,8 @@
+h1{
+    text-align: center;
+}
+
+
 ul{
     padding: 0;
     list-style: none;
@@ -7,13 +12,13 @@ ul{
 }
 
 li{
-    background: #f4f4f4;
+    background: #c2bfbf;
     padding: 10px;
     border-radius: 8px;
     text-align: center;
 }
 
 img{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
