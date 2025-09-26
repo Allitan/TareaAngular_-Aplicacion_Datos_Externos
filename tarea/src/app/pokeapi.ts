@@ -7,12 +7,12 @@ import { IListadoPokemon } from './interfaces/IListadoPokemon';
   providedIn: 'root'
 })
 export class Pokeapi {
-  private urlBase = 'https://pokeapi.co/api/v2/'
+  private apiUrl = 'https://pokeapi.co/api/v2/'
 
-  constructor ( private cliente: HttpClient) {}
+  constructor ( private http: HttpClient) {}
 
   getPokemons(limite: number = 30) : Observable<IListadoPokemon>{
-    const resultado = this.cliente.get<IListadoPokemon>(`${this.urlBase}pokemon?limit=${limite}`)
+    const resultado = this.http.get<IListadoPokemon>(`${this.apiUrl}pokemon?limit=${limite}`)
     return resultado
   }
 

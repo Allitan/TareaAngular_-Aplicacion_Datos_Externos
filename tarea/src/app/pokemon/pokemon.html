@@ -1,1 +1,9 @@
-<p>pokemon works!</p>
+<h1>Listado de Pokemon</h1>
+
+<ul>
+    <li *ngFor="let p of listadoPokemons; let i = index">
+         <img [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/' + (i+1) + '.png'" 
+         [alt]="p.name"/>
+        {{p.name | titlecase}}
+    </li>
+</ul>
